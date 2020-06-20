@@ -54,7 +54,7 @@ export default function Home(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>HEALWARE</h1>
                 <h3 className={classes.subtitle}>
-                  A web-based interface for article advisory and health calculator
+                  Artificial Intelligence platform for medical prognosis of fatal yet curable diseases.
                 </h3>
               </div>
             </GridItem>
