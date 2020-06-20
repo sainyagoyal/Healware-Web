@@ -1,0 +1,10 @@
+---------------------------------------LINKS FOR TRAINING NOTEBOOKS-------------------------
+
+SKIN CANCER TRAINING NOTEBOOK
+https://colab.research.google.com/drive/1FmuY47dDZH3LSyoi9xSnjZayyci_y50p
+
+BLINDNESS DETECTION TRAINING NOTEBOOK
+https://colab.research.google.com/drive/1GvLrJrV87XTg7q6YKFAhOLmfW1iom6GO
+
+BRAIN TUMOUR TRAINING NOTEBOOK
+https://colab.research.google.com/drive/1-pESQyODqD5-Gh36RgyqkEWHexRv8awv
