@@ -1,0 +1,21 @@
+{
+  "name": "healware",
+  "description": "web-based interface for articles advisory and health calculators",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
