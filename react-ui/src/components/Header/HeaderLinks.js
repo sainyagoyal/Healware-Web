@@ -89,7 +89,7 @@ export default function HeaderLinks(props) {
         }}
       >
         <Fade in={openbmi}>
-          <div className={classesModal.paper}>
+          <div className={classesModal.paper} style={{"display":"flex","width":"80%"}}>
             <BMI/>
           </div>
         </Fade>
@@ -116,7 +116,7 @@ export default function HeaderLinks(props) {
         }}
       >
         <Fade in={openbfc}>
-          <div className={classesModal.paper}>
+          <div className={classesModal.paper} style={{"display":"flex","width":"80%","max-height": "80%","overflow": "auto"}}>
             <BFC/>
           </div>
         </Fade>

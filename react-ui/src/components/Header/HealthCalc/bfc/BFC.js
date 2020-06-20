@@ -7,11 +7,12 @@ import FormLabel from '@material-ui/core/FormLabel';
 import './BFC.scss'
 
 
+
 class BFC extends Component {
 
   constructor(props) {
      super(props);
-     this.state = { value:'female',age:25,weight: 90, height: 180,neck:50,waist:96,hip:92, bmi: 27,bfc: 27, message: '', optimalweight: '', time: new Date().toLocaleTimeString() };
+     this.state = { value:'female',age:25,weight: 70, height: 172,neck:10,waist:28,hip:35, bmi: 27,bfc: 27, message: '', optimalweight: '', time: new Date().toLocaleTimeString() };
      this.submitMe = this.submitMe.bind(this);
      this.heightchange = this.heightchange.bind(this);
      this.weightchange = this.weightchange.bind(this);
@@ -161,8 +162,8 @@ class BFC extends Component {
             </label>
             <input type="text" name="hip" value={this.state.hip}onBlur={this.blur}  onChange={this.hipchange}    />
             <div id="result" style={{"display":"none"}}>
-              <label>{this.state.checked} Hello,friend!It's currently  {this.state.time} where you are living.<br></br> 
-              Your BFC is {this.state.bfc} </label>
+              <label>{this.state.checked} Hello,friend! It's currently  {this.state.time} where you are living.<br></br> 
+              <span style={{"font-size":"24px"}}>Your BFC is {this.state.bfc} </span></label>
               <label>{this.state.message}</label>
               <label>{this.state.optimalweight}</label>
             </div>

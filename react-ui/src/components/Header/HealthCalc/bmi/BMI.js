@@ -5,7 +5,7 @@ class BMI extends Component {
 
   constructor(props) {
      super(props);
-     this.state = { weight: 90, height: 180, bmi: 27, message: '', optimalweight: '', time: new Date().toLocaleTimeString() };
+     this.state = { weight: 65, height: 172, bmi: 27, message: '', optimalweight: '', time: new Date().toLocaleTimeString() };
      this.submitMe = this.submitMe.bind(this);
      this.heightchange = this.heightchange.bind(this);
      this.weightchange = this.weightchange.bind(this);
@@ -72,6 +72,10 @@ class BMI extends Component {
     console.log(e.target);
     this.setState({name: e.target.value});
   }
+  handleSubmit(){
+    const r=document.getElementById("result");
+    r.style.display="block";
+  }
 
   render() {
     return (
@@ -88,11 +92,13 @@ class BMI extends Component {
              Enter your weight in kg : 
             </label>
             <input type="text" name="weight" value={this.state.weight} onChange={this.weightchange}    />
-            <label>{this.state.checked} Hello,friend! It's currently  {this.state.time} where you are living.<br></br> Your BMI is {this.state.bmi} </label>
+            <div style={{"display":"none"}} id="result">
+            <label>{this.state.checked} Hello,friend! It's currently  {this.state.time} where you are living.<br></br> <span style={{"font-size":"24px"}}>Your BMI is {this.state.bmi} </span></label>
               <label>{this.state.message}</label>
               <label>{this.state.optimalweight}</label>
+              </div>
              
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Submit" onClick={this.handleSubmit}/>
           </form>
       
       </div>
