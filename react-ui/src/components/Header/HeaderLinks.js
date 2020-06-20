@@ -74,7 +74,7 @@ export default function HeaderLinks(props) {
           className={classes.navLink}
           onClick={handleOpenbmi}
         >
-          <FeedbackIcon /> BMI
+           BMI
         </Button>
         <Modal
         aria-labelledby="transition-modal-title"
@@ -101,7 +101,7 @@ export default function HeaderLinks(props) {
           className={classes.navLink}
           onClick={handleOpenbfc}
         >
-          <FeedbackIcon /> BFC
+           BFC
         </Button>
         <Modal
         aria-labelledby="transition-modal-title"
