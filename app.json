@@ -1,6 +1,6 @@
 {
   "name": "healware",
-  "description": "web-based interface for articles advisory and health calculators",
+  "description": " Artificial Intelligence platform for medical prognosis of fatal yet curable diseases.",
   "scripts": {
   },
   "env": {
