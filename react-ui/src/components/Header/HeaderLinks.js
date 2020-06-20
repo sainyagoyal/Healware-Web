@@ -1,11 +1,18 @@
 /*eslint-disable*/
 import React from "react";
+import BMI from './HealthCalc/bmi/BMI.js'
+import BFC from './HealthCalc/bfc/BFC.js'
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+
+
 
 // @material-ui/icons
 import FeedbackIcon from '@material-ui/icons/Feedback';
@@ -15,11 +22,32 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
+import usemodals from"assets/jss/material-kit-react/components/modalcalcStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
+  const classesModal = usemodals();
+  const [openbmi, setOpenbmi] = React.useState(false);
+  const [openbfc, setOpenbfc] = React.useState(false);
+
+  const handleOpenbmi = () => {
+    setOpenbmi(true);
+  };
+
+  const handleClosebmi = () => {
+    setOpenbmi(false);
+  };
+  const handleOpenbfc = () => {
+    setOpenbfc(true);
+  };
+
+  const handleClosebfc = () => {
+    setOpenbfc(false);
+  };
+
+
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -41,60 +69,58 @@ export default function HeaderLinks(props) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>*/}
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
+        <Button
+          color="transparent"
+          className={classes.navLink}
+          onClick={handleOpenbmi}
         >
-          <Button
-            href="https://twitter.com/RidhishJ"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
-          </Button>
-        </Tooltip>
+          <FeedbackIcon /> BMI
+        </Button>
+        <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classesModal.modal}
+        open={openbmi}
+        onClose={handleClosebmi}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={openbmi}>
+          <div className={classesModal.paper}>
+            <BMI/>
+          </div>
+        </Fade>
+      </Modal>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
+        <Button
+          color="transparent"
+          className={classes.navLink}
+          onClick={handleOpenbfc}
         >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/rowdy.ridhish"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/jain_ridhish/"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-instagram"} />
-          </Button>
-        </Tooltip>
+          <FeedbackIcon /> BFC
+        </Button>
+        <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classesModal.modal}
+        open={openbfc}
+        onClose={handleClosebfc}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={openbfc}>
+          <div className={classesModal.paper}>
+            <BFC/>
+          </div>
+        </Fade>
+      </Modal>
       </ListItem>
     </List>
   );
