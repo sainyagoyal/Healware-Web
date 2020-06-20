@@ -46,7 +46,7 @@ export default function Sainya() {
       </h4>
       <CardBody>
         <p className={classes.description}>
-          Back-end Developer proficient in server handling, different frameworks and use of version control. Someone who believes in rhythm, process and work cycle. Core Team Member, Development Students Club, RIT Bangalore. 
+          Back-end Developer proficient in server handling, different frameworks and use of version control, believes in rhythm, process and work cycle. Core Team Member, Development Students Club, RIT Bangalore. 
         </p>
       </CardBody>
       <CardFooter className={classes.justifyCenter}>

@@ -33,7 +33,7 @@ export default function Developers(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="HELLWARE"
+        brand="HEALWARE"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
