@@ -83,7 +83,7 @@ export default function LoginPage(props) {
       <Header
         absolute
         color="transparent"
-        brand="HELLWARE"
+        brand="HEALWARE"
         rightLinks={<HeaderLinks />}
         {...rest}
       />

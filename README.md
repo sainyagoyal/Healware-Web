@@ -1,4 +1,4 @@
-# Hellware
+# Healware
 
 A web based interface for article advisory and health calculators
 
