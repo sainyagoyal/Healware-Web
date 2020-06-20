@@ -57,7 +57,9 @@ export default function ProductSection() {
                         to minimize there medical expenses for severe yet curable diseases
                         like Diabetic Retinopathy, skin cancer, and Brain Tumor. The
                         accuracy of our service even beats the prediction made by an average
-                        doctor in respective fields.
+                        doctor in respective fields. Our system integrates features like chat window and
+                        health calculators like BMI and BFC. Also, there is room for feedback and faq for
+                        self-improvements and better user experience.
           </h5>
                 </GridItem>
             </GridContainer>
