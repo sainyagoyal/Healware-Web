@@ -5,9 +5,7 @@ import { USER_SIGNOUT } from '../../constants/users';
  * @param {Object} payload
  * @return {Object}
  */
-const signout = (payload) => ({
+export const signout = (payload) => ({
   type: USER_SIGNOUT,
   payload,
 });
-
-export default signout;

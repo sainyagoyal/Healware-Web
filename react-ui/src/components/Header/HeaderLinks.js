@@ -22,7 +22,8 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-import usemodals from"assets/jss/material-kit-react/components/modalcalcStyle.js";
+import usemodals from "assets/jss/material-kit-react/components/modalcalcStyle.js";
+import AuthButton from './AuthButton.js'
 
 const useStyles = makeStyles(styles);
 
@@ -56,7 +57,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <ExitToAppIcon /> Login/Signup
+          <ExitToAppIcon /> <AuthButton />
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -74,26 +75,26 @@ export default function HeaderLinks(props) {
           className={classes.navLink}
           onClick={handleOpenbmi}
         >
-           BMI
+          BMI
         </Button>
         <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classesModal.modal}
-        open={openbmi}
-        onClose={handleClosebmi}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={openbmi}>
-          <div className={classesModal.paper} style={{"display":"flex","width":"80%"}}>
-            <BMI/>
-          </div>
-        </Fade>
-      </Modal>
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classesModal.modal}
+          open={openbmi}
+          onClose={handleClosebmi}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={openbmi}>
+            <div className={classesModal.paper} style={{ "display": "flex", "width": "80%" }}>
+              <BMI />
+            </div>
+          </Fade>
+        </Modal>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
@@ -101,26 +102,26 @@ export default function HeaderLinks(props) {
           className={classes.navLink}
           onClick={handleOpenbfc}
         >
-           BFC
+          BFC
         </Button>
         <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classesModal.modal}
-        open={openbfc}
-        onClose={handleClosebfc}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={openbfc}>
-          <div className={classesModal.paper} style={{"display":"flex","width":"80%","max-height": "80%","overflow": "auto"}}>
-            <BFC/>
-          </div>
-        </Fade>
-      </Modal>
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classesModal.modal}
+          open={openbfc}
+          onClose={handleClosebfc}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={openbfc}>
+            <div className={classesModal.paper} style={{ "display": "flex", "width": "80%", "max-height": "80%", "overflow": "auto" }}>
+              <BFC />
+            </div>
+          </Fade>
+        </Modal>
       </ListItem>
     </List>
   );
