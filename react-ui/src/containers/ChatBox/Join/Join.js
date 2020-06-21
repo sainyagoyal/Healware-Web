@@ -15,11 +15,13 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import './Join.scss';
 
+
+
 const useStyles = makeStyles(styles);
 
 const Join = () => {
   
-   
+  
   console.log('enter');
   var request = require('request');
   var options = {
@@ -76,29 +78,32 @@ export default function Home(props) {
           </Link>
         </div>
         
-
+        
+        
         <div className="join-box">
+       
           <h2>Join a Room to chat!</h2>
 
             <div className="join-small-box">
-            <h3>Join</h3>
-            
-            <TextField
-                id="name"
-                label="Name"
-                variant="outlined"
-                color="primary"
-                onChange={(event)=>setName(event.target.value)}
-                /><br></br><br></br><br></br>
-                 <TextField
-                id="room"
-                label="Room"
-                variant="outlined"
-                color="primary"
-                onChange={(event)=>setRoom(event.target.value)}
-                /><br></br><br></br><br></br>
-            
-            <Link onClick={event => (!name)|| (!room)?event.preventDefault():null} to={`/chat?name=${name}&room=${room}`}>
+              <h3>Join</h3>
+              
+              <TextField
+                  id="name"
+                  label="Name"
+                  variant="outlined"
+                  color="primary"
+                  onChange={(event)=>setName(event.target.value)}
+                  /><br></br><br></br><br></br>
+                  <TextField
+                  id="room"
+                  label="Room"
+                  variant="outlined"
+                  color="primary"
+                  onChange={(event)=>setRoom(event.target.value)}
+                  /><br></br><br></br><br></br>
+                
+              
+              <Link onClick={event => (!name)|| (!room)?event.preventDefault():null} to={`/chat?name=${name}&room=${room}`}>
                 <Button variant="contained" color="primary">
                     Sign In
                 </Button>
@@ -112,3 +117,4 @@ export default function Home(props) {
     </div>
   );
 }
+
