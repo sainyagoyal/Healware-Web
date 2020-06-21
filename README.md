@@ -1,6 +1,6 @@
 # Healware
 
-AI platform for medical prognosis of severe yet curable disease
+An Artificial Intelligence platform for medical prognosis of severe yet curable disease
 
 ## Demo
 
@@ -8,10 +8,11 @@ AI platform for medical prognosis of severe yet curable disease
 
 ## Local Development
 
-Because this app is made of two npm projects, there are two places to run `npm` commands:
+Because this app is made of two three projects, there are three places to run `npm` commands:
 
 1. **Node API server** at the root `./`
-1. **React UI** in `react-ui/` directory.
+2. **React UI** in `react-ui/` directory.
+3. **Chat server** in `server-run/` directory
 
 ### Run the API server
 
@@ -30,7 +31,6 @@ npm start
 ```bash
 npm install package-name --save
 ```
-
 
 ### Run the React UI
 
@@ -52,6 +52,30 @@ npm start
 ```bash
 # Always change directory, first
 cd react-ui/
+
+npm install package-name --save
+```
+
+### Run the React UI
+
+In a separate terminal from the two servers, start the chat-server:
+
+```bash
+# Always change directory, first
+cd server-run/
+
+# Initial setup
+npm install
+
+# Start the server
+npm start
+```
+
+#### Install new npm packages for React UI
+
+```bash
+# Always change directory, first
+cd server-run/
 
 npm install package-name --save
 ```
