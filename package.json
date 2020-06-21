@@ -1,7 +1,7 @@
 {
   "name": "healware",
   "version": "1.0.0",
-  "description": " Artificial Intelligence platform for medical prognosis of severe yet curable diseases.",
+  "description": "Artificial Intelligence platform for medical prognosis of severe yet curable diseases.",
   "engines": {
     "node": "10.x"
   },
