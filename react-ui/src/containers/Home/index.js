@@ -14,22 +14,6 @@ import Tabs from './Tabs.js'
 
 const useStyles = makeStyles(styles)
 
-const testAPI = () => {
-  console.log('enter')
-  var request = require('request')
-  var options = {
-    'method': 'GET',
-    'url': 'https://jsonplaceholder.typicode.com/todos/1',
-    'headers': {
-      'Access-Control-Allow-Origin': '*'
-    }
-  }
-  request(options, function (error, response) {
-    if (error) throw new Error(error)
-    console.log(response)
-  })
-}
-
 export default function Home(props) {
   const classes = useStyles()
   const { ...rest } = props

@@ -15,15 +15,7 @@ import Model from './model.js'
 
 const useStyles = makeStyles(styles);
 
-const send = () => {
-  return
-}
-
 export default function LoginPage(props) {
-  const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  setTimeout(function () {
-    setCardAnimation("");
-  }, 700);
   const classes = useStyles();
   const { ...rest } = props;
   return (

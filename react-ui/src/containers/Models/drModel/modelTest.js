@@ -1,7 +1,6 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 import ImageIcon from "@material-ui/icons/Image";
@@ -14,24 +13,11 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import NavPills from "components/NavPills/NavPills.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/tabsStyle.js";
 
 const useStyles = makeStyles(styles);
-
-let image = null;
-let heatmap = "http://10.42.0.1:5000/get-image/output_heat_map.png";
-let imageURL = null;
-let result = null;
-
-
-const storeUrl = async function (e) {
-    /*
-    imageURL = e.target.value;
-    */
-};
 
 const store = async function (e) {
     /*
@@ -62,36 +48,6 @@ const store = async function (e) {
                 });
         }
     );
-    */
-};
-
-const getResultByURL = function (e) {
-    /*
-    console.log("getting results");
-    imageURL = document.getElementById("materialUrl").value;
-    var request = require("request");
-    const bodyF = `{\n"url": "${imageURL}"\n}`;
-
-    var options = {
-        method: "POST",
-        url: "http://10.42.0.1:5000/aptos/",
-        headers: {
-            Host: "10.42.0.1:5000",
-            Accept: "application/json",
-            "Content-Type": "application/json,application/json"
-        },
-        body: bodyF
-    };
-
-    request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-
-        console.log(body);
-        result = body.slice(14, body.length - 2);
-        console.log(result);
-        document.getElementById("result").innerHTML = result;
-        document.getElementById("heatimage").src = heatmap;
-    });
     */
 };
 
@@ -150,12 +106,6 @@ const getResult = function (e) {
     */
 };
 
-const heading = {
-    display: "flex",
-    justifyContent: "center",
-    marginBottom: "3%"
-};
-
 export default function SectionTabs() {
     const classes = useStyles();
     let img = null;
@@ -207,6 +157,7 @@ export default function SectionTabs() {
                                                     id="uploadedImageDivision"
                                                 >
                                                     <img
+                                                        alt='image did not load'
                                                         src="#"
                                                         id="uploadedImage"
                                                         height="300px"
@@ -289,6 +240,7 @@ export default function SectionTabs() {
                                             <span>
                                                 <p>
                                                     <img
+                                                        alt='image did not load'
                                                         src="#"
                                                         id="heatimage"
                                                         style={{ display: "none" }}

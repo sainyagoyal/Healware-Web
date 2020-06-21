@@ -6,11 +6,6 @@ import './styles.scss'
 
 class Desktopview extends React.Component {
 
-    state = {
-        screen: 'login',
-        open: false,
-    }
-
     openLogin = () => {
         console.log('Login screen')
         const container = document.getElementById('container');
@@ -24,8 +19,6 @@ class Desktopview extends React.Component {
     }
 
     render() {
-
-        const { screen, open } = this.state
 
         return (
             <div className="containerParent" id="container">

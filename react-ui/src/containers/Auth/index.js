@@ -13,10 +13,6 @@ import image from "assets/img/bg3.jpg";
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
-  const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  setTimeout(function () {
-    setCardAnimation("");
-  }, 700);
   const classes = useStyles();
   const { ...rest } = props;
   return (

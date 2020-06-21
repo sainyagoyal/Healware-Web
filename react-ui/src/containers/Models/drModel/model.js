@@ -23,7 +23,6 @@ export default function Model(props) {
         setCardAnimation("");
     }, 700);
     const classes = useStyles();
-    const { ...rest } = props;
     return (
 
         <Card className={classes[cardAnimaton]}>
