@@ -20,21 +20,12 @@ const userData = window.localStorage.getItem('user');
 if (typeof userData === 'object') {
   initialUserState = {
     ...initialState,
-  };
+  }
 } else {
   const payload = JSON.parse(userData);
-
-  if (payload.isSignedIn === undefined) {
-    initialUserState = {
-      ...initialState,
-      ...payload,
-    };
-  } else {
-    initialUserState = {
-      ...initialState,
-      isSignedIn: true,
-      ...payload,
-    };
+  initialUserState = {
+    ...initialState,
+    ...payload,
   }
 }
 

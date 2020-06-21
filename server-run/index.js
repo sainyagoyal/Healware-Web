@@ -57,7 +57,8 @@ transporter.verify((error, success) => {
     console.log('All works fine, congratz!')
   }
 })
-app.use(express.json()) app.post('/send', (req, res, next) => {
+app.use(express.json());
+app.post('/send', (req, res, next) => {
   const name = req.body.name
   const email = req.body.email
   const message = req.body.messageHtml
