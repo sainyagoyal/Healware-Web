@@ -99,10 +99,11 @@ function user(state = initialUserState, action) {
     }
 
     case USER_SIGNOUT: {
-      cookieRemoveAll();
-      localStoreRemove('user');
 
-      return initialState;
+      return {
+        ...state,
+        isSignedIn: false,
+      }
     }
 
     default:
