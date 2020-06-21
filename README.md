@@ -1,11 +1,10 @@
 # Healware
 
-A web based interface for article advisory and health calculators
+AI platform for medical prognosis of severe yet curable disease
 
 ## Demo
 
-[Demo deployment](#)
-link to be added...
+[Demo deployment](https://healware.herokuapp.com)
 
 ## Local Development
 
