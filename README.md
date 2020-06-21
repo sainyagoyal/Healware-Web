@@ -79,3 +79,18 @@ cd server-run/
 
 npm install package-name --save
 ```
+
+# Demo Frontend screenshots:
+![landing page](https://github.com/sainyagoyal/Healware-Web/blob/master/react-ui/src/assets/img/healware-demo%20screenshots/1.png)
+
+
+![auth page](https://github.com/sainyagoyal/Healware-Web/blob/master/react-ui/src/assets/img/healware-demo%20screenshots/2.png)
+
+
+![models page](https://github.com/sainyagoyal/Healware-Web/blob/master/react-ui/src/assets/img/healware-demo%20screenshots/3.png)
+
+
+![health calculator model](https://github.com/sainyagoyal/Healware-Web/blob/master/react-ui/src/assets/img/healware-demo%20screenshots/4.png)
+
+
+![chat window](https://github.com/sainyagoyal/Healware-Web/blob/master/react-ui/src/assets/img/healware-demo%20screenshots/5.png)
