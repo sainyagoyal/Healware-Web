@@ -74,7 +74,6 @@ export default function Home(props) {
           <Link to={`/`}>
           <Button>Back</Button>
           </Link>
-        
         </div>
         
 
