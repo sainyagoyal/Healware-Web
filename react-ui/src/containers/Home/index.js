@@ -54,7 +54,7 @@ export default function Home(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>HEALWARE</h1>
                 <h3 className={classes.subtitle}>
-                  Artificial Intelligence platform for medical prognosis of fatal yet curable diseases.
+                  Artificial Intelligence platform for medical prognosis of severe yet curable diseases.
                 </h3>
               </div>
             </GridItem>
