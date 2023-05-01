@@ -2,5 +2,5 @@ scikit-image
 torch
 torchvision
 fastai
-Flask==1.0.2
+Flask==2.3.2
 flask_resful
